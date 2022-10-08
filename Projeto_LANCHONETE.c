@@ -49,9 +49,17 @@ Produto lerProduto(){
 	return produto;
 }
 
-
-//colar o código: Comanda lerComanda() aqui
-
+Comanda lerComanda(){
+	Comanda c;
+	printf("\nDigite o seu nome: ");
+	fgets(c.descricaoCliente, 49, stdin);
+	printf("\nDigite o codigo da comanda: ");
+	scanf("%d", &c.codigoComanda);
+	fflush (stdin);
+	c.produto = lerProduto();
+	
+	return c;
+}
 
 //Inserir, remover e listar a fila
 void inserir_na_fila(No **fila, Comanda comanda){
