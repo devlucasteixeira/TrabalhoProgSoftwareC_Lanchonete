@@ -130,7 +130,14 @@ int cadastrarProduto(){
 }
 
 
-//colar o código void imprimirLista() aqui
+void imprimirLista(){
+	int i;
+	for(i=0; i<quant; i++){
+		printf("\nDescricao do produto: %s", lista[i].descricaoProduto);
+		printf("\nCodigo do produto: %d", lista[i].codigoProduto);
+		printf("\nValor do produto: %.2f\n\n", lista[i].valorProduto);
+	}
+}
 
 
 void salvarEmArquivo(){
